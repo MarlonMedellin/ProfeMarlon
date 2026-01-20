@@ -5,31 +5,48 @@ import Footer from "../components/Footer.astro";
 import { Icon } from "astro-icon/components";
 
 const stats = [
-    { label: "Cursos dictados", value: "50+", icon: "lucide:book-open" },
     {
-        label: "Proyectos terminados",
-        value: "30+",
-        icon: "lucide:check-circle",
+        label: "Integro datos tecnología y pedagogía para decisiones educativas basadas en evidencia fortaleciendo prácticas docentes gestión institucional aprendizaje significativo y mejora.",
+        value: "Evidencia",
+        icon: "lucide:line-chart",
     },
-    { label: "Años de experiencia", value: "10+", icon: "lucide:calendar" },
-    { label: "Estudiantes formados", value: "2k+", icon: "lucide:users" },
+    {
+        label: "Conecto datos tecnología y pedagogía creando puentes entre análisis aula y liderazgo escolar para transformar experiencias y resultados de aprendizaje.",
+        value: "Puente",
+        icon: "lucide:link-2",
+    },
+    {
+        label: "Produzco videos guías y recursos digitales claros rigurosos y accesibles que promueven comprensión profunda práctica autónoma y transferencia contextual duradera.",
+        value: "Contenido",
+        icon: "lucide:video",
+    },
+    {
+        label: "Diseño experiencias de gamificación con narrativa retos retroalimentación y tecnología para aumentar motivación participación colaboración y comprensión conceptual en aula.",
+        value: "Juego",
+        icon: "lucide:gamepad-2",
+    },
 ];
 
 const specialties = [
     {
-        title: "Analítica de Datos",
-        desc: "Transformando datos brutos en información estratégica para la toma de decisiones basada en evidencia.",
-        icon: "lucide:bar-chart",
+        title: "Gestión educativa basada en datos",
+        desc: "Acompaño equipos directivos en lectura de datos para planear metas escolares, priorizar recursos, monitorear avances y fortalecer cultura de mejora.",
+        icon: "lucide:bar-chart-2",
     },
     {
-        title: "Tecnología Educativa",
-        desc: "Implementación de ecosistemas digitales y herramientas para optimizar procesos de enseñanza-aprendizaje.",
-        icon: "lucide:laptop",
+        title: "Formación docente",
+        desc: "Formo docentes mediante talleres prácticos que integran didáctica, tecnología y analítica, promoviendo reflexión pedagógica, colaboración y mejora continua en aula.",
+        icon: "lucide:users",
     },
     {
-        title: "Docencia Universitaria",
-        desc: "Formación de la próxima generación de profesionales con un enfoque práctico, técnico y humano.",
-        icon: "lucide:graduation-cap",
+        title: "Innovación curricular STEAM",
+        desc: "Diseño experiencias STEAM que articulan matemáticas ciencia y tecnología con problemas fomentando creatividad pensamiento crítico trabajo colaborativo y aprendizaje interdisciplinar.",
+        icon: "lucide:atom",
+    },
+    {
+        title: "Transformación digital educativa",
+        desc: "Oriento instituciones en transformación digital educativa implementando plataformas interoperables flujos de trabajo automatizados analítica integrada y prácticas pedagógicas coherentes sostenibles.",
+        icon: "lucide:workflow",
     },
 ];
 ---
@@ -68,26 +85,32 @@ const specialties = [
                             <p
                                 class="text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-[600px] leading-relaxed mx-auto lg:mx-0"
                             >
-                                Apasionado por transformar la educación a través
-                                de los datos. Ayudo a instituciones y
-                                profesionales a navegar la era digital con
-                                herramientas estratégicas y pedagogía moderna.
+                                Acompaño a instituciones y equipos educativos a
+                                convertir datos en decisiones pedagógicas con
+                                impacto real en el aprendizaje. Combino
+                                pensamiento analítico, herramientas digitales y
+                                didáctica para mejorar prácticas, resultados y
+                                experiencias educativas.
                             </p>
                         </div>
                         <div
                             class="flex flex-wrap justify-center lg:justify-start gap-4"
                         >
-                            <a
-                                href="/cv-marlon.pdf"
-                                download
-                                class="flex min-w-[160px] items-center justify-center rounded-xl bg-primary h-12 lg:h-14 px-6 text-white text-base font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
-                            >
-                                <Icon
-                                    name="lucide:download"
-                                    class="mr-2 w-5 h-5"
-                                />
-                                <span>Descargar CV</span>
-                            </a>
+                            {
+                                (
+                                    <a
+                                        href="https://www.canva.com/design/DAGVwuji4Y8/H_scnSlJtDv8w33DEUfErA/view?utm_content=DAGVwuji4Y8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h02f0ba5e45"
+                                        target="_blank"
+                                        class="flex min-w-[160px] items-center justify-center rounded-xl bg-primary h-12 lg:h-14 px-6 text-white text-base font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                                    >
+                                        <Icon
+                                            name="lucide:download"
+                                            class="mr-2 w-5 h-5"
+                                        />
+                                        <span>Descargar CV</span>
+                                    </a>
+                                )
+                            }
                             <a
                                 href="https://t.me/profemarlon"
                                 target="_blank"
@@ -109,7 +132,7 @@ const specialties = [
                                 class="relative aspect-square overflow-hidden rounded-2xl bg-gray-200 dark:bg-gray-800 shadow-2xl"
                             >
                                 <img
-                                    src="/images/IMG_20250701_142949.jpg"
+                                    src="/images/IMG_20250910_184319.jpg"
                                     alt="Marlon Arcila"
                                     class="h-full w-full object-cover object-center filter contrast-[1.05]"
                                 />
@@ -156,12 +179,12 @@ const specialties = [
                     <p
                         class="text-lg text-gray-600 dark:text-gray-400 max-w-[720px]"
                     >
-                        Liderando la intersección entre los datos y la educación
-                        moderna.
+                        Puente entre analítica, herramientas digitales y
+                        práctica pedagógica con evidencia.
                     </p>
                 </div>
                 <div
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
                 >
                     {
                         specialties.map((item) => (
