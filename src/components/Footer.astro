@@ -1,42 +1,141 @@
 ---
 import { Icon } from "astro-icon/components";
+
+const projects = [
+    {
+        title: "Canal de YouTube",
+        desc: "Recursos en video para aprender matemáticas, datos y tecnología educativa.",
+        href: "https://www.youtube.com/@MarlonDavidArcila",
+        icon: "lucide:youtube",
+        color: "hover:text-red-600"
+    },
+    {
+        title: "IntroMatematicas",
+        desc: "Curso intro matemáticas gamificado transformando aprendizaje en retos divertidos.",
+        href: "https://github.com/MarlonMedellin/IntroMatematicas",
+        icon: "lucide:code",
+        color: "hover:text-gray-900 dark:hover:text-white"
+    },
+    {
+        title: "Libros Escritos",
+        desc: "Textos educativos diseñados para comprender matemáticas con claridad práctica.",
+        links: [
+            { label: "Libro 1", href: "https://repositorio.itm.edu.co/entities/publication/afa683a3-2917-4421-b0f8-9bb9d5149180" },
+            { label: "Libro 2", href: "https://drive.google.com/file/d/1p-fgEcnJr89PGhxqSLzkZAlm0fLURHw0/view" }
+        ],
+        icon: "lucide:book-open",
+        color: "hover:text-blue-600"
+    },
+    {
+        title: "Investigaciones",
+        desc: "Publicaciones académicas y análisis de datos aplicados a educación.",
+        href: "https://scholar.google.com/citations?user=uDMmOJ0AAAAJ&hl",
+        icon: "lucide:users",
+        color: "hover:text-blue-400"
+    },
+    {
+        title: "Material Docente",
+        desc: "Recursos didácticos y herramientas para apoyar práctica docente efectiva.",
+        href: "https://sites.google.com/colmayor.edu.co/asesoriasacademicas/docentes?authuser=1",
+        icon: "lucide:clipboard",
+        color: "hover:text-green-600"
+    }
+];
+
 const currentYear = new Date().getFullYear();
 ---
 
-<footer
-    class="px-6 lg:px-40 py-12 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark/50"
->
-    <div
-        class="mx-auto max-w-[1280px] flex flex-col md:flex-row justify-between items-center gap-8"
-    >
-        <div class="flex items-center gap-3">
-            <div class="text-primary h-6 w-6">
-                <Icon name="lucide:bar-chart-3" class="w-full h-full" />
+<footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark/50 transition-colors">
+    <!-- Top Section: Projects Grid -->
+    <div class="px-6 lg:px-40 py-16">
+        <div class="mx-auto max-w-[1280px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+                {projects.map((project) => (
+                    <div class="flex flex-col gap-4 group">
+                        <!-- Icon & Title -->
+                        <div class="flex items-center gap-3">
+                            <div class={`p-2.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300`}>
+                                <Icon name={project.icon} class="w-6 h-6" />
+                            </div>
+                            <h3 class="font-bold text-gray-900 dark:text-white text-base">
+                                {project.title}
+                            </h3>
+                        </div>
+                        
+                        <!-- Description -->
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed min-h-[40px]">
+                            {project.desc}
+                        </p>
+
+                        <!-- Link(s) -->
+                        <div class="mt-auto pt-2">
+                            {project.links ? (
+                                <div class="flex flex-col gap-2">
+                                    {project.links.map((link) => (
+                                        <a 
+                                            href={link.href} 
+                                            target="_blank" 
+                                            class="inline-flex items-center text-sm font-semibold text-primary hover:underline decoration-2 underline-offset-4"
+                                        >
+                                            {link.label}
+                                            <Icon name="lucide:external-link" class="ml-1.5 w-3.5 h-3.5" />
+                                        </a>
+                                    ))}
+                                </div>
+                            ) : (
+                                <a 
+                                    href={project.href} 
+                                    target="_blank" 
+                                    class="inline-flex items-center text-sm font-semibold text-primary hover:underline decoration-2 underline-offset-4"
+                                >
+                                    Ver proyecto
+                                    <Icon name="lucide:external-link" class="ml-1.5 w-3.5 h-3.5" />
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                ))}
             </div>
-            <span class="font-bold text-gray-900 dark:text-white"
-                >ProfeMarlon</span
-            >
         </div>
+    </div>
 
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-            © {currentYear} Marlon Arcila. Todos los derechos reservados.
-        </p>
+    <!-- Bottom Section: Brand & Copyright -->
+    <div class="px-6 lg:px-40 py-8 bg-gray-50/50 dark:bg-black/20 border-t border-gray-100 dark:border-gray-800">
+        <div class="mx-auto max-w-[1280px] flex flex-col md:row justify-between items-center gap-8 md:flex-row">
+            <!-- Logo & Title -->
+            <a href="/" class="flex items-center gap-3 group">
+                <div class="text-primary h-8 w-8 transition-transform group-hover:scale-110">
+                    <Icon name="lucide:bar-chart-3" class="w-full h-full" />
+                </div>
+                <span class="font-black text-xl tracking-tight text-gray-900 dark:text-white">
+                    ProfeMarlon
+                </span>
+            </a>
 
-        <div class="flex gap-4">
-            <a
-                href="https://t.me/profemarlon"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all"
-            >
-                <Icon name="lucide:send" class="w-5 h-5" />
-            </a>
-            <a
-                href="mailto:contacto@profemarlon.com"
-                class="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all"
-            >
-                <Icon name="lucide:mail" class="w-5 h-5" />
-            </a>
+            <!-- Copyright -->
+            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">
+                © {currentYear} Marlon Arcila. Todos los derechos reservados.
+            </p>
+
+            <!-- Social Links -->
+            <div class="flex gap-4">
+                <a
+                    href="https://t.me/profemarlon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Telegram"
+                    class="h-10 w-10 flex items-center justify-center rounded-xl bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all shadow-sm border border-gray-100 dark:border-gray-700"
+                >
+                    <Icon name="lucide:send" class="w-5 h-5" />
+                </a>
+                <a
+                    href="mailto:mdav@outlook.com"
+                    aria-label="Email"
+                    class="h-10 w-10 flex items-center justify-center rounded-xl bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all shadow-sm border border-gray-100 dark:border-gray-700"
+                >
+                    <Icon name="lucide:mail" class="w-5 h-5" />
+                </a>
+            </div>
         </div>
     </div>
 </footer>

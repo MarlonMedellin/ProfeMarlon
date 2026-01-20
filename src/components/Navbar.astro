@@ -1,11 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const navItems = [
-    { name: "Sobre mí", href: "/sobre-mi" },
-    { name: "Portafolio", href: "/portafolio" },
-    { name: "CV", href: "/cv" },
-];
+const navItems = [{ name: "Sobre mí", href: "/sobre-mi" }];
 
 const currentPath = Astro.url.pathname;
 ---
@@ -46,13 +42,17 @@ const currentPath = Astro.url.pathname;
         </nav>
 
         <div class="flex items-center gap-4">
-            <a
-                href="/cv-marlon.pdf"
-                download
-                class="hidden sm:flex min-w-[120px] items-center justify-center rounded-lg bg-primary h-10 px-4 text-white text-sm font-bold tracking-wide hover:brightness-110 transition-all shadow-lg shadow-primary/20"
-            >
-                <span>Descargar CV</span>
-            </a>
+            {
+                (
+                    <a
+                        href="https://www.canva.com/design/DAGVwuji4Y8/H_scnSlJtDv8w33DEUfErA/view?utm_content=DAGVwuji4Y8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h02f0ba5e45"
+                        target="_blank"
+                        class="hidden sm:flex min-w-[120px] items-center justify-center rounded-lg bg-primary h-10 px-4 text-white text-sm font-bold tracking-wide hover:brightness-110 transition-all shadow-lg shadow-primary/20"
+                    >
+                        <span>Descargar CV</span>
+                    </a>
+                )
+            }
 
             <!-- Mobile Menu Button (Interactive logic would go in a script or specific component) -->
             <button class="md:hidden text-gray-600 dark:text-gray-300">
