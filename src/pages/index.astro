@@ -3,6 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import heroImage from "../assets/images/IMG_20250910_184319.jpg";
 
 const stats = [
     {
@@ -131,9 +133,13 @@ const specialties = [
                             <div
                                 class="relative aspect-square overflow-hidden rounded-2xl bg-gray-200 dark:bg-gray-800 shadow-2xl"
                             >
-                                <img
-                                    src="/images/IMG_20250910_184319.jpg"
+                                <Image
+                                    src={heroImage}
                                     alt="Marlon Arcila"
+                                    width={800}
+                                    height={800}
+                                    loading="eager"
+                                    fetchpriority="high"
                                     class="h-full w-full object-cover object-center filter contrast-[1.05]"
                                 />
                             </div>
