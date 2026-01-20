@@ -3,14 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
-
-import img1 from "../assets/images/IMG_20250701_142949.jpg";
-import img2 from "../assets/images/IMG_20250702_121259.jpg";
-import img3 from "../assets/images/IMG_20250702_202720.jpg";
-import img4 from "../assets/images/IMG_20250702_202731.jpg";
-import img5 from "../assets/images/IMG_20250704_195144.jpg";
-import img6 from "../assets/images/IMG_20250713_115836.jpg";
 
 const projects = [
     {
@@ -18,42 +10,42 @@ const projects = [
         category: "EdTech",
         desc: "Sistema integral de monitoreo en tiempo real para optimizar el aprendizaje mediante el análisis de datos pedagógicos.",
         date: "Marzo 2024",
-        image: img1,
+        image: "/images/IMG_20250701_142949.jpg",
     },
     {
         title: "Dashboard Académico",
         category: "Analytics",
         desc: "Visualización avanzada de indicadores clave para el seguimiento del rendimiento estudiantil a nivel institucional.",
         date: "Enero 2024",
-        image: img2,
+        image: "/images/IMG_20250702_121259.jpg",
     },
     {
         title: "Estrategias EdTech 2024",
         category: "Consultoría",
         desc: "Plan de implementación de tecnologías emergentes para centros educativos de educación media y superior.",
         date: "Diciembre 2023",
-        image: img3,
+        image: "/images/IMG_20250702_202720.jpg",
     },
     {
         title: "Procesamiento de Big Data",
         category: "Data",
         desc: "Pipeline de limpieza y procesamiento masivo de datos para plataformas de evaluación estandarizada.",
         date: "Octubre 2023",
-        image: img4,
+        image: "/images/IMG_20250702_202731.jpg",
     },
     {
         title: "UX para E-learning",
         category: "LMS",
         desc: "Rediseño de interfaz y experiencia de usuario para mejorar la tasa de finalización en cursos virtuales.",
         date: "Agosto 2023",
-        image: img5,
+        image: "/images/IMG_20250704_195144.jpg",
     },
     {
         title: "Smart Campus IoT",
         category: "IoT",
         desc: "Implementación de sensores para la gestión eficiente de espacios educativos y control de asistencia automatizado.",
         date: "Junio 2023",
-        image: img6,
+        image: "/images/IMG_20250713_115836.jpg",
     },
 ];
 
@@ -110,11 +102,9 @@ const categories = ["Todos", "Educación", "Analítica", "EdTech", "Dashboards"]
                 projects.map((project) => (
                     <div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
                         <div class="relative aspect-video overflow-hidden">
-                            <Image
+                            <img
                                 src={project.image}
                                 alt={project.title}
-                                width={600}
-                                height={337}
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                             <div class="absolute top-4 left-4">
@@ -172,7 +162,7 @@ const categories = ["Todos", "Educación", "Analítica", "EdTech", "Dashboards"]
                 </div>
                 <div>
                     <a
-                        href="https://t.me/profemarlon"
+                        href="https://t.me/MarlonArcila"
                         target="_blank"
                         class="inline-block bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg shadow-primary/30 hover:shadow-xl hover:-translate-y-1 transition-all"
                     >
