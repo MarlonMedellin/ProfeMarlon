@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog y Pensamientos | ProfeMarlon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111618] dark:text-white transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f0f3f4] dark:border-white/10">
+<div class="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight">ProfeMarlon</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#">Blog</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-[#f0f3f4] dark:bg-white/5 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-[#617c89] text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-[#617c89]" placeholder="Buscar artículos..." type="text"/>
+</div>
+<button class="bg-primary text-white text-sm font-bold py-2 px-5 rounded-lg hover:bg-primary/90 transition-all">
+                    Newsletter
+                </button>
+</div>
+</div>
+</header>
+<!-- Reading Progress Bar (Simulated) -->
+<div class="fixed top-[73px] left-0 w-full h-1 bg-gray-100 dark:bg-white/5 z-50">
+<div class="h-full bg-primary" style="width: 35%;"></div>
+</div>
+<main class="max-w-[1200px] mx-auto px-6 py-10">
+<!-- Section Header -->
+<div class="mb-8">
+<h2 class="text-4xl font-extrabold tracking-tight mb-2">Blog y Pensamientos</h2>
+<p class="text-[#617c89] text-lg">Explorando la intersección entre datos, tecnología y educación.</p>
+</div>
+<!-- Featured Post Hero -->
+<section class="mb-16">
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-white/5 border border-[#f0f3f4] dark:border-white/10 flex flex-col lg:flex-row shadow-sm hover:shadow-md transition-shadow">
+<div class="lg:w-3/5 overflow-hidden">
+<div class="w-full h-full min-h-[400px] bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Digital classroom visualization with AI data points" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWbWqPobOH1TDmOEzWekzRA1sk7pzSzqCTCUfcLID1qIPmIRMLpC77Kjqss_FhoktIORuNG2G_DCi5SUDvbeLOof17U7W0bA1EBC8j4Klxbjy48lD656VovGJZIRt8CtWSiy3dHmi1DJn_sH1fSfwuj9wGsfU_RctIri1E1SSs_UKmpLUW9hTY3tpu9RFRWIT9B_cOVCL_gOlE79SCFOCv_sW1RHa2Q3CbuexI0eOWEq80fnWGutbGMTxbZ26rGtVKy_AXKNztMA");'>
+</div>
+</div>
+<div class="lg:w-2/5 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Destacado</span>
+<span class="text-[#617c89] text-sm font-medium">Oct 24, 2023 • 12 min read</span>
+</div>
+<h3 class="text-3xl font-bold leading-tight mb-4 group-hover:text-primary transition-colors">
+                        El Futuro de la IA Generativa en la Educación Superior
+                    </h3>
+<p class="text-[#617c89] leading-relaxed mb-8">
+                        ¿Cómo están transformando los modelos de lenguaje el rol del docente y la evaluación del aprendizaje? Analizamos las tendencias y riesgos para 2024.
+                    </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2 hover:bg-primary/90 transition-all">
+                            Leer artículo completo
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area with Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Article Feed (Main) -->
+<div class="lg:col-span-8 space-y-12">
+<div class="flex items-center justify-between border-b border-[#f0f3f4] dark:border-white/10 pb-4 mb-4">
+<h4 class="text-xl font-bold">Publicaciones Recientes</h4>
+<div class="flex gap-4">
+<button class="text-sm font-bold text-primary">Todos</button>
+<button class="text-sm font-medium text-[#617c89] hover:text-primary">Populares</button>
+</div>
+</div>
+<!-- Post 1 -->
+<div class="group flex flex-col md:flex-row gap-6 items-start">
+<div class="w-full md:w-56 shrink-0 aspect-video rounded-lg overflow-hidden bg-white dark:bg-white/5 border border-[#f0f3f4] dark:border-white/10">
+<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Data visualization chart with colorful lines" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGLBb1yGlBF61i2OqEriOzgxUIxDotcBPFdqP7DoKXyD1DUnV6MPo5LstIft6lsYBeDedACfV7wcg8UYv1ptIrbvGwp4ZXThtBiUkNU9hTILibxaihenIau6cDzt-vyzoNiBhjKalgFPmq1zTrDRCx5T3hSGJ-7njEVjrii6f31ElJLkZR0gochZazr2ASmTXGH7ZE2xEQbM8npp1ZnbiiyyTfqryuZleaBuR-ygerU5KJnVJktbdYFdGXLWjt398A3LqknbQrAw");'></div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 text-[#617c89] text-xs font-medium mb-2 uppercase tracking-wide">
+<span>Data Analytics</span>
+<span>•</span>
+<span>Sep 12, 2023</span>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors leading-snug">Visualización de datos: Más allá de las gráficas de barras</h4>
+<p class="text-[#617c89] text-sm line-clamp-2 mb-4">Descubre cómo contar historias impactantes utilizando herramientas modernas de visualización y principios de diseño cognitivo.</p>
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-[#617c89]">8 min de lectura</span>
+<a class="text-sm font-bold text-primary flex items-center gap-1" href="#">Leer más <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="group flex flex-col md:flex-row gap-6 items-start">
+<div class="w-full md:w-56 shrink-0 aspect-video rounded-lg overflow-hidden bg-white dark:bg-white/5 border border-[#f0f3f4] dark:border-white/10">
+<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Code on a computer screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDg4HfDL9aNlEfOiCu-5AtYT7kE7SkDtEM00MiWoM-NcIW6SbhdwcEaHS4kCL9ZaYk3le6-ZqAf9kCCTc2QwtlDSBlpb0kjPzNnvJSt9r3IQUwUvjILim9R8svg3rUD8nV9ArgVh87leyxrsPj0CBmo5rs5w5xjLyUQehlgvuyAvvsm0PHlinKsCfxbpg2CzWh8pMyzbzJlcNVIWRzA53uc2bnzpi_m5JOOjl1oVcxca1bJK8Vj2dQ8jKlmSb0sUmMlbuxWVXYmNA");'></div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 text-[#617c89] text-xs font-medium mb-2 uppercase tracking-wide">
+<span>EdTech</span>
+<span>•</span>
+<span>Ago 30, 2023</span>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors leading-snug">Python para Educadores: Automatizando lo rutinario</h4>
+<p class="text-[#617c89] text-sm line-clamp-2 mb-4">Guía práctica para docentes que quieren optimizar su tiempo automatizando reportes de notas y seguimiento de estudiantes.</p>
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-[#617c89]">15 min de lectura</span>
+<a class="text-sm font-bold text-primary flex items-center gap-1" href="#">Leer más <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="group flex flex-col md:flex-row gap-6 items-start">
+<div class="w-full md:w-56 shrink-0 aspect-video rounded-lg overflow-hidden bg-white dark:bg-white/5 border border-[#f0f3f4] dark:border-white/10">
+<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Abstract neural network background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDeS7X1RT5ZNQ-k1QRnYRxeaUDqSAg5cjH13nomJwcFHpNuKezHwFkgNa1GAW3CmF9UBOF-3K4BBWqdJkrdoAVUg9Vxa69xrlnHWTcQdJHa4o7JbYSAeXRASuk3HnBjfpoOZjVpIejCHegs7P269c9ZePvGD7QaiYAjgBRvB_0F8yfhdyOx0o2kha84txTJCp4r0Ne1-yhNnPI7E07sYD0XfghFYuWO6rBypbnnKY9vVPFQUC_a6-BVwRwcNv7MRqOL_JynvDtHwQ");'></div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 text-[#617c89] text-xs font-medium mb-2 uppercase tracking-wide">
+<span>Tech Trends</span>
+<span>•</span>
+<span>Jul 15, 2023</span>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors leading-snug">Ética en Algoritmos: El desafío de la transparencia</h4>
+<p class="text-[#617c89] text-sm line-clamp-2 mb-4">Una reflexión sobre el sesgo en los datos y la responsabilidad de los desarrolladores en la creación de herramientas equitativas.</p>
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-[#617c89]">6 min de lectura</span>
+<a class="text-sm font-bold text-primary flex items-center gap-1" href="#">Leer más <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center pt-10">
+<button class="border-2 border-primary text-primary font-bold py-3 px-10 rounded-lg hover:bg-primary hover:text-white transition-all">
+                        Cargar más artículos
+                    </button>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-10">
+<!-- Categories Card -->
+<div class="bg-white dark:bg-white/5 border border-[#f0f3f4] dark:border-white/10 p-6 rounded-xl">
+<h5 class="font-bold text-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">category</span>
+                        Categorías
+                    </h5>
+<ul class="space-y-3">
+<li>
+<a class="flex items-center justify-between group" href="#">
+<span class="text-[#617c89] group-hover:text-primary transition-colors">Educación</span>
+<span class="bg-[#f0f3f4] dark:bg-white/10 text-xs font-bold px-2 py-1 rounded-full text-[#111618] dark:text-white">14</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between group" href="#">
+<span class="text-[#617c89] group-hover:text-primary transition-colors">Tecnología</span>
+<span class="bg-[#f0f3f4] dark:bg-white/10 text-xs font-bold px-2 py-1 rounded-full text-[#111618] dark:text-white">28</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between group" href="#">
+<span class="text-[#617c89] group-hover:text-primary transition-colors">Data Analytics</span>
+<span class="bg-[#f0f3f4] dark:bg-white/10 text-xs font-bold px-2 py-1 rounded-full text-[#111618] dark:text-white">21</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between group" href="#">
+<span class="text-[#617c89] group-hover:text-primary transition-colors">AI &amp; ML</span>
+<span class="bg-[#f0f3f4] dark:bg-white/10 text-xs font-bold px-2 py-1 rounded-full text-[#111618] dark:text-white">9</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Newsletter Card -->
+<div class="bg-primary p-8 rounded-xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h5 class="font-bold text-xl mb-3">Suscríbete al Newsletter</h5>
+<p class="text-white/80 text-sm mb-6">Recibe mensualmente un resumen con lo mejor de mis pensamientos sobre Analytics y EdTech.</p>
+<div class="space-y-3">
+<input class="w-full bg-white/10 border-white/20 rounded-lg py-2.5 px-4 text-sm focus:ring-white placeholder:text-white/60" placeholder="Tu correo electrónico" type="email"/>
+<button class="w-full bg-white text-primary font-bold py-2.5 rounded-lg text-sm hover:bg-gray-100 transition-colors">
+                                Unirse ahora
+                            </button>
+</div>
+</div>
+<!-- Abstract background decoration -->
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+</div>
+<!-- Featured Author / Socials -->
+<div class="p-6">
+<h5 class="font-bold text-lg mb-6">Sígueme</h5>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-[#f0f3f4] dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="size-10 rounded-full bg-[#f0f3f4] dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">groups</span>
+</a>
+<a class="size-10 rounded-full bg-[#f0f3f4] dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">code</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer class="border-t border-[#f0f3f4] dark:border-white/10 py-12 mt-20">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<div class="text-primary size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-bold tracking-tight">ProfeMarlon © 2023</span>
+</div>
+<div class="flex gap-8 text-sm text-[#617c89]">
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a>
+<a class="hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home ProfeMarlon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111618] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#dbe2e6] dark:border-[#1e2d35] bg-white/80 dark:bg-[#101c22]/80 backdrop-blur-md px-6 lg:px-40 py-3">
+<div class="mx-auto flex max-w-[1280px] items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight text-[#111618] dark:text-white">ProfeMarlon</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Sobre mí</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Portafolio</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">CV</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Blog</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[120px] items-center justify-center rounded-lg bg-primary h-10 px-4 text-white text-sm font-bold tracking-wide hover:brightness-110 transition-all">
+<span>Descargar CV</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="px-6 lg:px-40 py-12 lg:py-24">
+<div class="mx-auto max-w-[1280px]">
+<div class="flex flex-col-reverse lg:flex-row items-center gap-12 @container">
+<!-- Left Content -->
+<div class="flex flex-1 flex-col gap-8 text-center lg:text-left">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Bienvenido a mi espacio</span>
+<h1 class="text-4xl font-black leading-tight tracking-tight text-[#111618] dark:text-white @[480px]:text-6xl">
+                                    Marlon Arcila
+                                </h1>
+<h2 class="text-xl font-medium text-[#617c89] dark:text-gray-400 @[480px]:text-2xl">
+                                    Docente, Analítica &amp; Tecnología Educativa
+                                </h2>
+<p class="text-base lg:text-lg text-[#111618]/70 dark:text-gray-300 max-w-[600px] leading-relaxed">
+                                    Apasionado por transformar la educación a través de los datos. Ayudo a instituciones y profesionales a navegar la era digital con herramientas estratégicas y pedagogía moderna.
+                                </p>
+</div>
+<div class="flex flex-wrap justify-center lg:justify-start gap-4">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl bg-primary h-12 lg:h-14 px-6 text-white text-base font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined mr-2">download</span>
+<span>Descargar CV</span>
+</button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl border-2 border-primary/20 bg-transparent h-12 lg:h-14 px-6 text-[#111618] dark:text-white text-base font-bold hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined mr-2">send</span>
+<span>Telegram</span>
+</button>
+</div>
+</div>
+<!-- Right Image -->
+<div class="flex-1 w-full max-w-[500px]">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative aspect-square overflow-hidden rounded-2xl bg-[#dbe2e6] dark:bg-gray-800 shadow-2xl">
+<img alt="Marlon Arcila" class="h-full w-full object-cover object-top filter contrast-[1.05] grayscale-[0.2]" data-alt="Retrato profesional de un profesor de tecnología" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHtCTZ_3sebRkfyCSdKIuqBS6aWn36d1fTYH-xfCAvRPYpxsE_CU1UP7vDYoLkp0rwTM0P3y0LXMuDGzjH4bY3Y1M5LoHkyPpjQY5ge-SgZIzXyT7cUgTWHVq3C2VibklCrq5IL69V3vW-r1PKS6cMwzhCgAGCOSZuCHgkBy5HeHyUuIAcQzEVE4zyzStbEX-Vx3Rkj3ZqnpgLhNET-ISFb_a7nV4Ri25ag-PxQmpZj8FkMu61psz1Jbz88ZY_HU1yNdTs7NUrEQ"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="px-6 lg:px-40 py-12 bg-white dark:bg-black/20">
+<div class="mx-auto max-w-[1280px]">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col items-center justify-center p-6 rounded-xl border border-[#dbe2e6] dark:border-[#1e2d35] bg-background-light/50 dark:bg-background-dark/50">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">school</span>
+<p class="text-3xl font-black text-[#111618] dark:text-white">50+</p>
+<p class="text-sm font-medium text-[#617c89]">Cursos dictados</p>
+</div>
+<div class="flex flex-col items-center justify-center p-6 rounded-xl border border-[#dbe2e6] dark:border-[#1e2d35] bg-background-light/50 dark:bg-background-dark/50">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">task_alt</span>
+<p class="text-3xl font-black text-[#111618] dark:text-white">30+</p>
+<p class="text-sm font-medium text-[#617c89]">Proyectos terminados</p>
+</div>
+<div class="flex flex-col items-center justify-center p-6 rounded-xl border border-[#dbe2e6] dark:border-[#1e2d35] bg-background-light/50 dark:bg-background-dark/50">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">calendar_today</span>
+<p class="text-3xl font-black text-[#111618] dark:text-white">10+</p>
+<p class="text-sm font-medium text-[#617c89]">Años de experiencia</p>
+</div>
+<div class="flex flex-col items-center justify-center p-6 rounded-xl border border-[#dbe2e6] dark:border-[#1e2d35] bg-background-light/50 dark:bg-background-dark/50">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">group</span>
+<p class="text-3xl font-black text-[#111618] dark:text-white">2k+</p>
+<p class="text-sm font-medium text-[#617c89]">Estudiantes formados</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialty Section -->
+<section class="px-6 lg:px-40 py-20 @container">
+<div class="mx-auto max-w-[1280px]">
+<div class="mb-12 flex flex-col gap-4 text-center lg:text-left">
+<h2 class="text-3xl font-black tracking-tight text-[#111618] dark:text-white lg:text-4xl">
+                            Áreas de Especialidad
+                        </h2>
+<p class="text-lg text-[#617c89] max-w-[720px]">
+                            Liderando la intersección entre los datos y la educación moderna.
+                        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="flex flex-col gap-5 rounded-2xl border border-[#dbe2e6] dark:border-[#1e2d35] bg-white dark:bg-background-dark p-8 hover:shadow-xl transition-shadow">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">bar_chart</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-[#111618] dark:text-white">Analítica de Datos</h3>
+<p class="text-sm leading-relaxed text-[#617c89] dark:text-gray-400">
+                                    Transformando datos brutos en información estratégica para la toma de decisiones basada en evidencia.
+                                </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-5 rounded-2xl border border-[#dbe2e6] dark:border-[#1e2d35] bg-white dark:bg-background-dark p-8 hover:shadow-xl transition-shadow">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">laptop_mac</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-[#111618] dark:text-white">Tecnología Educativa</h3>
+<p class="text-sm leading-relaxed text-[#617c89] dark:text-gray-400">
+                                    Implementación de ecosistemas digitales y herramientas para optimizar procesos de enseñanza-aprendizaje.
+                                </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-5 rounded-2xl border border-[#dbe2e6] dark:border-[#1e2d35] bg-white dark:bg-background-dark p-8 hover:shadow-xl transition-shadow">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">menu_book</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-[#111618] dark:text-white">Docencia Universitaria</h3>
+<p class="text-sm leading-relaxed text-[#617c89] dark:text-gray-400">
+                                    Formación de la próxima generación de profesionales con un enfoque práctico, técnico y humano.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 lg:px-40 py-20 bg-primary/5 dark:bg-primary/10">
+<div class="mx-auto max-w-[960px] text-center">
+<div class="flex flex-col items-center gap-8">
+<div class="flex flex-col gap-4">
+<h2 class="text-3xl font-black tracking-tight text-[#111618] dark:text-white @[480px]:text-4xl">
+                                ¿Interesado en colaborar?
+                            </h2>
+<p class="text-lg text-[#617c89] dark:text-gray-300 max-w-[600px] mx-auto">
+                                Estoy disponible para proyectos de consultoría, formación corporativa y conferencias sobre tecnología y educación.
+                            </p>
+</div>
+<div class="flex justify-center w-full">
+<button class="flex min-w-[240px] items-center justify-center rounded-xl bg-primary h-14 px-8 text-white text-lg font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all">
+<span class="material-symbols-outlined mr-2">chat_bubble</span>
+<span>Contactar por Telegram</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="px-6 lg:px-40 py-12 border-t border-[#dbe2e6] dark:border-[#1e2d35]">
+<div class="mx-auto max-w-[1280px] flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="font-bold text-[#111618] dark:text-white">ProfeMarlon</span>
+</div>
+<p class="text-sm text-[#617c89]">© 2024 Marlon Arcila. Todos los derechos reservados.</p>
+<div class="flex gap-4">
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,6 @@
+﻿11:17:24 [types] Generated 66ms
+11:17:24 [build] output: "static"
+11:17:24 [build] directory: C:\Users\mdav\Downloads\GIT\ProfeMarlon\dist\
+11:17:24 [build] Collecting build info...
+11:17:24 [build] Ô£ô Completed in 163ms.
+11:17:24 [build] Building static entrypoints...

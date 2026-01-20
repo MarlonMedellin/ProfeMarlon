@@ -1,0 +1,16 @@
+{
+    "name": "ProfeMarlon",
+    "short_name": "ProfeMarlon",
+    "description": "Sitio web personal de Marlon Arcila",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#003366",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

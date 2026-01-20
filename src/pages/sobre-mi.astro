@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { Icon } from "astro-icon/components";
+
+const values = [
+    {
+        title: "Innovación Ética",
+        desc: "Implementar tecnología siempre priorizando el bienestar humano y la privacidad de los datos.",
+        icon: "lucide:lightbulb",
+    },
+    {
+        title: "Claridad Radical",
+        desc: "Transformar datos complejos en insights accionables y comprensibles para todos.",
+        icon: "lucide:search",
+    },
+];
+---
+
+<BaseLayout title="Sobre Mí | ProfeMarlon">
+    <Navbar />
+
+    <main class="max-w-[1200px] mx-auto px-6 py-12 md:py-20">
+        <!-- Hero Section: Split Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <!-- Left: Profile Image -->
+            <div class="lg:col-span-5 lg:sticky lg:top-28">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-xl opacity-50"
+                    >
+                    </div>
+                    <div
+                        class="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800"
+                    >
+                        <img
+                            src="/images/IMG_20250702_121259.jpg"
+                            alt="Marlon Arcila"
+                            class="h-full w-full object-cover object-center"
+                        />
+                    </div>
+                    <div class="mt-6 flex items-center gap-4 px-2">
+                        <div class="flex -space-x-2">
+                            <span
+                                class="w-10 h-10 rounded-full border-2 border-white bg-primary flex items-center justify-center text-white text-xs font-bold"
+                                >10+</span
+                            >
+                            <span
+                                class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 text-xs font-bold"
+                                >Exp</span
+                            >
+                        </div>
+                        <p
+                            class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                        >
+                            Años transformando la educación con datos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Content Column -->
+            <div class="lg:col-span-7 flex flex-col space-y-12">
+                <!-- Impact Statement -->
+                <div class="space-y-6">
+                    <h1
+                        class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight"
+                    >
+                        Impactando a través del <span class="text-primary"
+                            >dato</span
+                        > y la enseñanza
+                    </h1>
+                    <p
+                        class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-light"
+                    >
+                        Especialista en Analytics y Tecnología Educativa. Mi
+                        pasión es transformar la educación mediante el uso
+                        estratégico de la información para crear experiencias de
+                        aprendizaje personalizadas.
+                    </p>
+                    <div class="flex items-center gap-2 text-primary">
+                        <Icon name="lucide:map-pin" class="w-5 h-5" />
+                        <span class="text-base font-medium"
+                            >Medellín, Colombia</span
+                        >
+                    </div>
+                </div>
+
+                <!-- Mi Historia -->
+                <div class="space-y-4 border-l-4 border-primary/20 pl-8">
+                    <h2
+                        class="text-2xl font-bold text-gray-900 dark:text-white"
+                    >
+                        Mi Historia
+                    </h2>
+                    <div
+                        class="space-y-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed"
+                    >
+                        <p>
+                            Con una trayectoria dedicada a la intersección entre
+                            los datos y el aprendizaje, he trabajado para cerrar
+                            la brecha tecnológica en entornos educativos. Mi
+                            camino comenzó con la curiosidad de cómo la
+                            información puede personalizar la enseñanza.
+                        </p>
+                        <p>
+                            A lo largo de los años, he evolucionado hasta
+                            liderar proyectos de transformación digital en
+                            instituciones de prestigio, integrando modelos de
+                            analítica avanzada para predecir el éxito
+                            estudiantil y optimizar currículos académicos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="space-y-6">
+                    <h2
+                        class="text-2xl font-bold text-gray-900 dark:text-white"
+                    >
+                        Valores
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {
+                            values.map((val) => (
+                                <div class="p-6 bg-white dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                                    <Icon
+                                        name={val.icon}
+                                        class="text-primary mb-3 text-3xl w-8 h-8"
+                                    />
+                                    <h3 class="font-bold text-lg mb-2 text-gray-900 dark:text-white">
+                                        {val.title}
+                                    </h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                                        {val.desc}
+                                    </p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <!-- Enfoque -->
+                <div class="space-y-6">
+                    <h2
+                        class="text-2xl font-bold text-gray-900 dark:text-white"
+                    >
+                        Enfoque
+                    </h2>
+                    <p
+                        class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                    >
+                        No se trata solo de números, sino de las personas detrás
+                        de ellos. Mi metodología combina el <span
+                            class="font-semibold text-primary"
+                            >Data Storytelling</span
+                        > con el <span class="font-semibold text-primary"
+                            >Learning Design</span
+                        > para asegurar que cada solución tecnológica tenga un impacto
+                        pedagógico real y medible.
+                    </p>
+                    <div class="pt-8">
+                        <a
+                            href="https://t.me/profemarlon"
+                            target="_blank"
+                            class="inline-flex bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/30 transition-all items-center gap-3"
+                        >
+                            Trabajemos Juntos
+                            <Icon name="lucide:arrow-right" class="w-5 h-5" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</BaseLayout>

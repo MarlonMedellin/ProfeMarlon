@@ -1,0 +1,63 @@
+---
+import { Icon } from "astro-icon/components";
+
+const navItems = [
+    { name: "Sobre mí", href: "/sobre-mi" },
+    { name: "Portafolio", href: "/portafolio" },
+    { name: "CV", href: "/cv" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+    class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-40 py-3"
+>
+    <div class="mx-auto flex max-w-[1280px] items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+            <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white transition-transform group-hover:scale-110"
+            >
+                <Icon name="lucide:bar-chart-3" class="w-6 h-6" />
+            </div>
+            <h2
+                class="text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+                ProfeMarlon
+            </h2>
+        </a>
+
+        <nav class="hidden md:flex flex-1 justify-center gap-10">
+            {
+                navItems.map((item) => (
+                    <a
+                        href={item.href}
+                        class:list={[
+                            "text-sm font-semibold transition-colors hover:text-primary",
+                            currentPath === item.href
+                                ? "text-primary"
+                                : "text-gray-600 dark:text-gray-300",
+                        ]}
+                    >
+                        {item.name}
+                    </a>
+                ))
+            }
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a
+                href="/cv-marlon.pdf"
+                download
+                class="hidden sm:flex min-w-[120px] items-center justify-center rounded-lg bg-primary h-10 px-4 text-white text-sm font-bold tracking-wide hover:brightness-110 transition-all shadow-lg shadow-primary/20"
+            >
+                <span>Descargar CV</span>
+            </a>
+
+            <!-- Mobile Menu Button (Interactive logic would go in a script or specific component) -->
+            <button class="md:hidden text-gray-600 dark:text-gray-300">
+                <Icon name="lucide:menu" class="w-6 h-6" />
+            </button>
+        </div>
+    </div>
+</header>
