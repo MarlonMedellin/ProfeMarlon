@@ -3,268 +3,44 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import { Icon } from "astro-icon/components";
-
-const experience = [
-    {
-        role: "Líder de Analytics Educativo",
-        company: "TechEdu Solutions",
-        period: "2021 - Presente",
-        desc: "Liderazgo de proyectos de BI para instituciones de educación superior. Implementación de modelos predictivos de deserción estudiantil.",
-        icon: "lucide:bar-chart-3",
-    },
-    {
-        role: "Consultor de Tecnología Educativa",
-        company: "Global Learning Corp",
-        period: "2018 - 2021",
-        desc: "Diseño e implementación de estrategias de transformación digital para colegios. Gestión de plataformas LMS a gran escala.",
-        icon: "lucide:book-open",
-    },
-    {
-        role: "Administrador de LMS",
-        company: "Universidad Nacional",
-        period: "2016 - 2018",
-        desc: "Administración técnica y pedagógica de plataformas Moodle y Canvas. Integración de herramientas LTI.",
-        icon: "lucide:settings",
-    },
-];
-
-const education = [
-    {
-        degree: "Maestría en Educación con énfasis en Tecnología",
-        school: "Universidad Internacional de Tecnología",
-        year: "2020",
-        current: true,
-    },
-    {
-        degree: "Ingeniería de Sistemas",
-        school: "Universidad Tecnológica del Estado",
-        year: "2014",
-        current: false,
-    },
-];
-
-const skills = [
-    { name: "Python", icon: "lucide:terminal" },
-    { name: "Power BI", icon: "lucide:monitor" },
-    { name: "LMS (Moodle)", icon: "lucide:component" },
-    { name: "SQL", icon: "lucide:database" },
-    { name: "Excel (Expert)", icon: "lucide:table" },
-    { name: "Inst. Design", icon: "lucide:pen-tool" },
-];
-
-const competencies = [
-    "Liderazgo Ágil",
-    "Análisis de Datos",
-    "Docencia Virtual",
-    "UX Educativa",
-    "Gestión de Proyectos",
-];
 ---
 
-<BaseLayout title="CV Profesional | ProfeMarlon">
+<BaseLayout
+    title="Curriculum Vitae | Profe Marlon"
+    description="Hoja de vida profesional de Marlon Arcila. Experiencia en Docencia, Analítica y Tecnología Educativa."
+    image="/og-image.png"
+>
     <Navbar />
 
-    <main class="flex flex-1 justify-center py-8">
-        <div class="max-w-[1200px] w-full px-10">
-            <!-- Breadcrumbs -->
-            <nav class="flex flex-wrap gap-2 py-2 text-sm font-medium">
-                <a href="/" class="text-gray-500 hover:text-primary">Inicio</a>
-                <span class="text-gray-400">/</span>
-                <span class="text-gray-900 dark:text-white">CV Profesional</span
+    <main
+        class="flex-1 flex flex-col items-center justify-center py-20 px-6 bg-background-light dark:bg-background-dark min-h-[60vh]"
+    >
+        <div class="text-center max-w-2xl mx-auto space-y-8">
+            <h1 class="text-4xl font-black text-gray-900 dark:text-white">
+                Curriculum Vitae
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400">
+                Puedes ver o descargar mi hoja de vida actualizada en formato
+                PDF.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                    href="/cv-marlon.pdf"
+                    download
+                    class="flex items-center justify-center rounded-xl bg-primary h-14 px-8 text-white text-lg font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all"
                 >
-            </nav>
-
-            <!-- Page Heading -->
-            <div class="flex flex-wrap justify-between items-end gap-3 py-6">
-                <div class="flex min-w-72 flex-col gap-2">
-                    <h1
-                        class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-tight"
-                    >
-                        CV e Historial Profesional
-                    </h1>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg">
-                        Especialista en Analytics y Tecnología Educativa.
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-4">
-                <!-- Main Column: Timeline & Education -->
-                <div class="lg:col-span-2 space-y-10">
-                    <!-- Experience Section -->
-                    <section>
-                        <div class="flex items-center gap-2 mb-6">
-                            <Icon
-                                name="lucide:briefcase"
-                                class="text-primary w-6 h-6"
-                            />
-                            <h2
-                                class="text-gray-900 dark:text-white text-2xl font-bold"
-                            >
-                                Experiencia Profesional
-                            </h2>
-                        </div>
-
-                        <div class="space-y-0">
-                            {
-                                experience.map((item, index) => (
-                                    <div class="flex gap-x-4">
-                                        <div class="flex flex-col items-center gap-1 pt-1">
-                                            <div class="bg-primary/10 p-2 rounded-full flex items-center justify-center">
-                                                <Icon
-                                                    name={item.icon}
-                                                    class="text-primary text-xl w-5 h-5"
-                                                />
-                                            </div>
-                                            {index !==
-                                                experience.length - 1 && (
-                                                <div class="w-[2px] bg-primary/20 h-full grow min-h-[40px]" />
-                                            )}
-                                        </div>
-                                        <div
-                                            class:list={[
-                                                "flex flex-1 flex-col",
-                                                index !== experience.length - 1
-                                                    ? "pb-10"
-                                                    : "",
-                                            ]}
-                                        >
-                                            <p class="text-gray-900 dark:text-white text-lg font-bold">
-                                                {item.role}
-                                            </p>
-                                            <div class="flex items-center gap-2 text-primary font-semibold text-sm mb-2">
-                                                <span>{item.company}</span>
-                                                <span>•</span>
-                                                <span>{item.period}</span>
-                                            </div>
-                                            <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
-                                                {item.desc}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </section>
-
-                    <!-- Education Section -->
-                    <section
-                        class="bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 rounded-xl p-8 shadow-sm"
-                    >
-                        <div class="flex items-center gap-2 mb-8">
-                            <Icon
-                                name="lucide:graduation-cap"
-                                class="text-primary w-6 h-6"
-                            />
-                            <h2
-                                class="text-gray-900 dark:text-white text-2xl font-bold"
-                            >
-                                Educación
-                            </h2>
-                        </div>
-                        <div class="space-y-6">
-                            {
-                                education.map((edu) => (
-                                    <div
-                                        class:list={[
-                                            "flex flex-col gap-1 border-l-4 pl-4",
-                                            edu.current
-                                                ? "border-primary"
-                                                : "border-gray-200 dark:border-gray-700",
-                                        ]}
-                                    >
-                                        <h3 class="text-gray-900 dark:text-white text-lg font-bold">
-                                            {edu.degree}
-                                        </h3>
-                                        <p class="text-primary font-semibold">
-                                            {edu.school}
-                                        </p>
-                                        <p class="text-gray-500 dark:text-gray-400 text-sm">
-                                            {edu.year}
-                                        </p>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </section>
-                </div>
-
-                <!-- Sidebar: Skills & Actions -->
-                <div class="lg:col-span-1 flex flex-col gap-6">
-                    <!-- Skills Grid Section -->
-                    <div
-                        class="bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm"
-                    >
-                        <h3
-                            class="text-gray-900 dark:text-white text-lg font-bold mb-6 flex items-center gap-2"
-                        >
-                            <Icon
-                                name="lucide:brain"
-                                class="text-primary w-5 h-5"
-                            />
-                            Habilidades Técnicas
-                        </h3>
-                        <div class="grid grid-cols-2 gap-3">
-                            {
-                                skills.map((skill) => (
-                                    <div class="flex flex-col items-center gap-2 p-3 bg-background-light dark:bg-gray-800/50 rounded-lg group hover:bg-primary/10 transition-colors">
-                                        <Icon
-                                            name={skill.icon}
-                                            class="text-primary group-hover:scale-110 transition-transform w-6 h-6"
-                                        />
-                                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 text-center">
-                                            {skill.name}
-                                        </span>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </div>
-
-                    <!-- Competencies -->
-                    <div
-                        class="bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm"
-                    >
-                        <h3
-                            class="text-gray-900 dark:text-white text-lg font-bold mb-4 flex items-center gap-2"
-                        >
-                            <Icon
-                                name="lucide:award"
-                                class="text-primary w-5 h-5"
-                            />
-                            Competencias
-                        </h3>
-                        <div class="flex flex-wrap gap-2">
-                            {
-                                competencies.map((comp) => (
-                                    <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">
-                                        {comp}
-                                    </span>
-                                ))
-                            }
-                        </div>
-                    </div>
-
-                    <!-- Quick Contact -->
-                    <div class="bg-primary text-white rounded-xl p-6 shadow-lg">
-                        <p
-                            class="text-xs font-bold uppercase tracking-widest mb-4 opacity-80"
-                        >
-                            ¿Interesado en colaborar?
-                        </p>
-                        <h4 class="text-xl font-black mb-6">
-                            Impulsemos tu tecnología educativa juntos
-                        </h4>
-                        <a
-                            href="https://t.me/profemarlon"
-                            target="_blank"
-                            class="w-full py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 no-underline"
-                        >
-                            <Icon name="lucide:send" class="w-5 h-5" />
-                            Contactar ahora
-                        </a>
-                    </div>
-                </div>
+                    <Icon name="lucide:download" class="mr-2 w-6 h-6" />
+                    <span>Descargar PDF</span>
+                </a>
+                <a
+                    href="/cv-marlon.pdf"
+                    target="_blank"
+                    class="flex items-center justify-center rounded-xl border-2 border-primary text-primary h-14 px-8 text-lg font-bold hover:bg-primary/5 transition-all"
+                >
+                    <Icon name="lucide:eye" class="mr-2 w-6 h-6" />
+                    <span>Ver Online</span>
+                </a>
             </div>
         </div>
     </main>

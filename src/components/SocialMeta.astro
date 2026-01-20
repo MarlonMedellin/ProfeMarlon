@@ -1,0 +1,57 @@
+---
+/**
+ * Componente SocialMeta.astro
+ * Encargado de gestionar todas las metaetiquetas para SEO social (Open Graph y Twitter Cards).
+ */
+
+interface Props {
+    title?: string;
+    description?: string;
+    image?: string;
+    url?: string;
+    type?: string;
+}
+
+const {
+    title = "Profe Marlon — Docente, Analítica & Tecnología Educativa",
+    description = "Transformo datos en mejores aprendizajes mediante analítica, tecnología educativa y didáctica con impacto.",
+    image = "/og-image.png",
+    url = "https://profemarlon.com/",
+    type = "website",
+} = Astro.props;
+
+// Asegurar que la URL de la imagen sea absoluta si es necesario
+// (Aunque si se usa en la raíz, los crawlers suelen entender /og-image.png si hay un base)
+const canonicalURL = new URL(
+    Astro.url.pathname,
+    Astro.site || "https://profemarlon.com/",
+);
+const socialImageURL = new URL(image, Astro.site || "https://profemarlon.com/");
+---
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={socialImageURL} />
+<meta property="og:locale" content="es_CO" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={socialImageURL} />
+
+<!-- Alt text para accesibilidad en redes sociales -->
+<meta property="og:image:alt" content={title} />
+<meta name="twitter:image:alt" content={title} />
