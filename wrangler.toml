@@ -1,14 +1,7 @@
-# Cloudflare Pages Configuration
+#:schema node_modules/wrangler/config-schema.json
 name = "profemarlon"
-type = "javascript"
+compatibility_date = "2024-04-03"
+pages_build_output_dir = "dist"
 
-[build]
-command = "npm run build"
-outdir = "dist"
-
-[build.upload]
-format = "service-worker"
-
-[env.production]
-config_path = "wrangler.toml"
-vars = { ENVIRONMENT = "production" }
+[vars]
+ENVIRONMENT = "production"
