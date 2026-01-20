@@ -1,0 +1,14 @@
+# Cloudflare Pages Configuration
+name = "profemarlon"
+type = "javascript"
+
+[build]
+command = "npm run build"
+outdir = "dist"
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+config_path = "wrangler.toml"
+vars = { ENVIRONMENT = "production" }
